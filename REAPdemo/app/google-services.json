@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1020489279162",
+    "firebase_url": "https://reapdemo-d65ce.firebaseio.com",
+    "project_id": "reapdemo-d65ce",
+    "storage_bucket": "reapdemo-d65ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020489279162:android:44c9eb50173244dd124483",
+        "android_client_info": {
+          "package_name": "com.example.reapdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020489279162-ps5tnki24n9upobdv1ar7a6k107o7rs1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQi_7iR4YeRQErBDgXJjEnAuKAlLpfNf8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020489279162-ps5tnki24n9upobdv1ar7a6k107o7rs1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
