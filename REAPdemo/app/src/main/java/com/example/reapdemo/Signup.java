@@ -92,8 +92,10 @@ public class Signup extends AppCompatActivity {
                                                 Log.d(TAG, "User profile updated.");
                                                 FirebaseDatabase database = FirebaseDatabase.getInstance();
                                                 DatabaseReference root = database.getReference();
-                                                root.child("Users").child(user.getUid()).child("Email").setValue(user.getEmail());
                                                 root.child("Users").child(user.getUid()).child("Name").setValue(user.getDisplayName());
+                                                root.child("Users").child(user.getUid()).child("Email").setValue(user.getEmail());
+                                                root.child("Users").child(user.getUid()).child("Uid").setValue(user.getUid());
+
                                                 startActivity(new Intent(getApplicationContext(),MainActivity.class));
                                                 finish();
                                             }
