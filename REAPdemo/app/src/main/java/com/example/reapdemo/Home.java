@@ -41,7 +41,7 @@ public class Home extends AppCompatActivity {
         String user_name = mAuth.getCurrentUser().getDisplayName();
 
         header = findViewById(R.id.welcome);
-        header.setText("Welcome "+user_name+", "+"here's your transactions.");
+        header.setText("Hello "+user_name+", "+"your transactions.");
         add_ledger = findViewById(R.id.ledger_add_button);
         logout = findViewById(R.id.logout_button);
         reload = findViewById(R.id.reload_button);

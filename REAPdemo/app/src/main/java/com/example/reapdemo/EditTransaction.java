@@ -35,7 +35,7 @@ public class EditTransaction extends AppCompatActivity {
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Transactions");
                 ref.child(Uid1).child(date).child("amount").setValue(amount);
                 ref.child(Uid2).child(date).child("amount").setValue(amount);
-                Toast.makeText(getApplicationContext(),"Transaction saved successfully!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Transaction saved successfully, please reload!",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
@@ -43,11 +43,11 @@ public class EditTransaction extends AppCompatActivity {
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Deleting transaction, please wait...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Completing transaction, please wait...",Toast.LENGTH_SHORT).show();
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("Transactions");
                 ref.child(Uid1).child(date).removeValue();
                 ref.child(Uid2).child(date).removeValue();
-                Toast.makeText(getApplicationContext(),"Transaction deleted sucessfully!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Transaction completed sucessfully, please reload!",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

@@ -42,7 +42,7 @@ public class AddLedger extends AppCompatActivity {
                 DatabaseReference root = FirebaseDatabase.getInstance().getReference();
                 root.child("Transactions").child(Uid1).child(currentTime).setValue(t);
                 root.child("Transactions").child(Uid2).child(currentTime).setValue(t);
-                Toast.makeText(getApplicationContext(),"Transaction added succesfully!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Transaction added succesfully, please reload!",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
