@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -31,6 +32,7 @@ public class AddLedger extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"adding transaction, please wait...",Toast.LENGTH_SHORT).show();
                 String string_amount = amount.getText().toString();
                 String currentTime = Calendar.getInstance().getTime().toString();
                 String UserName1 = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
@@ -40,7 +42,7 @@ public class AddLedger extends AppCompatActivity {
                 DatabaseReference root = FirebaseDatabase.getInstance().getReference();
                 root.child("Transactions").child(Uid1).child(currentTime).setValue(t);
                 root.child("Transactions").child(Uid2).child(currentTime).setValue(t);
-
+                Toast.makeText(getApplicationContext(),"Transaction added succesfully!",Toast.LENGTH_SHORT).show();
                 finish();
             }
         });

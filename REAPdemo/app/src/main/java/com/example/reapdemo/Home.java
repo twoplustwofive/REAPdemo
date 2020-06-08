@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,7 +45,6 @@ public class Home extends AppCompatActivity {
         add_ledger = findViewById(R.id.ledger_add_button);
         logout = findViewById(R.id.logout_button);
         reload = findViewById(R.id.reload_button);
-
         reload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

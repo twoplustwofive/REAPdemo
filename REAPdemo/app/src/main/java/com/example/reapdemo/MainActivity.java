@@ -40,11 +40,9 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"logging in, please wait...",Toast.LENGTH_SHORT).show();
                 final String string_email = email.getText().toString();
                 final String string_password = password.getText().toString();
-                final ProgressDialog progress = new ProgressDialog(MainActivity.this);
-                progress.setMessage("Registering...");
-                progress.show();
                 if(string_email.length()!=0&&string_password.length()!=0)
                 mAuth.signInWithEmailAndPassword(string_email, string_password)
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
@@ -56,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                     // Sign in success, update UI with the signed-in user's information
                                     Log.d(TAG, "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
+                                    Toast.makeText(getApplicationContext(),"Login successful!",Toast.LENGTH_SHORT).show();
                                     startActivity(new Intent(MainActivity.this,Home.class));
                                     finish();
                                 } else {
@@ -136,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
                         });
                 else
                     Toast.makeText(getApplicationContext(),"Incomplete credentials!",Toast.LENGTH_SHORT).show();
-                progress.dismiss();
             }
         });
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -33,7 +34,7 @@ public class LedgerAdapter extends RecyclerView.Adapter<LedgerAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull final LedgerAdapter.ViewHolder holder, int position) {
-        Transaction u = transactionList.get(position);
+        final Transaction u = transactionList.get(position);
         if(FirebaseAuth.getInstance().getCurrentUser().getUid().equals(u.getUid1()))
         holder.Name.setText("Name: "+u.getUserName2());
         else
@@ -45,7 +46,11 @@ public class LedgerAdapter extends RecyclerView.Adapter<LedgerAdapter.ViewHolder
         holder.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent i = new Intent(context, EditTransaction.class);
+                i.putExtra("Uid1",u.getUid1());
+                i.putExtra("Uid2",u.getUid2());
+                i.putExtra("date",u.getDateTime());
+                context.startActivity(i);
             }
         });
     }

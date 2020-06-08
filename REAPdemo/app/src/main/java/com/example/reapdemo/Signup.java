@@ -46,16 +46,16 @@ public class Signup extends AppCompatActivity {
                 final String string_pass2 = password2.getText().toString();
                 final String string_name = name.getText().toString();
                 if(string_email.length()==0)
-                    Toast.makeText(Signup.this,"Incomplete email!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Signup.this,"Incomplete email!",Toast.LENGTH_SHORT).show();
                 else
                 if(!string_pass1.equals(string_pass2))
-                    Toast.makeText(Signup.this,"Passwords not matched.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Signup.this,"Passwords not matched.",Toast.LENGTH_SHORT).show();
                 else
                 if(string_pass1.length()==0)
-                    Toast.makeText(Signup.this,"Incorrect Password.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Signup.this,"Incorrect Password.",Toast.LENGTH_SHORT).show();
                 else
                 if(string_name.length()==0)
-                    Toast.makeText(Signup.this,"Incomplete name.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Signup.this,"Incomplete name.",Toast.LENGTH_SHORT).show();
                 else
                     doSignup(string_email,string_pass1,string_name);
             }
@@ -64,6 +64,7 @@ public class Signup extends AppCompatActivity {
     }
 
     public void doSignup(String email, String password, final String name){
+        Toast.makeText(getApplicationContext(),"Registering, please wait...",Toast.LENGTH_SHORT).show();
         final FirebaseAuth mAuth = FirebaseAuth.getInstance();
         final ProgressDialog progress = new ProgressDialog(Signup.this);
         progress.setMessage("Registering...");

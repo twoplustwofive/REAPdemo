@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectUser"></activity>
+        <activity android:name=".EditTransaction"></activity>
+        <activity android:name=".SelectUser" />
         <activity android:name=".AddLedger" />
         <activity android:name=".Signup" />
         <activity android:name=".Home" />
