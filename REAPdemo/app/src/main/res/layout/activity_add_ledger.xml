@@ -4,67 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".AddLedger">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Reap"
+        android:text="Transaction"
         android:textSize="40dp"
         android:textColor="@android:color/holo_blue_dark"
         android:layout_centerHorizontal="true"
-        android:id="@+id/reap_name"
+        android:id="@+id/text_ledger"
         />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
-        android:hint="Email:"
-        android:inputType="textEmailAddress"
-        android:id="@+id/user_email"
+        android:hint="Name: "
+        android:inputType="textPersonName"
+        android:id="@+id/name"
         android:layout_centerHorizontal="true"
         android:paddingLeft="10dp"
-        android:layout_below="@+id/reap_name"
+        android:layout_below="@+id/text_ledger"
         />
     <EditText
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:hint="Password:"
-        android:inputType="textPassword"
-        android:id="@+id/user_password"
+        android:hint="Amount in Rupees:"
+        android:inputType="numberDecimal"
+        android:id="@+id/amount"
         android:layout_centerHorizontal="true"
         android:paddingLeft="10dp"
-        android:layout_below="@+id/user_email"
+        android:layout_below="@+id/name"
         android:layout_marginTop="10dp"
         />
     <Button
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/user_password"
-        android:id="@+id/login_button"
-        android:text="LOGIN"
-        android:background="@android:color/holo_blue_dark"
-        android:layout_marginTop="10dp"
-        android:textColor="#fff"
-        android:layout_centerHorizontal="true"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_below="@+id/login_button"
-        android:text="New user? Sign up."
-        android:id="@+id/new_user"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        />
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_below="@+id/new_user"
+        android:layout_below="@+id/amount"
         android:id="@+id/signup_button"
-        android:text="Sign up"
+        android:text="Add"
         android:background="@android:color/holo_blue_dark"
         android:layout_marginTop="10dp"
         android:textColor="#fff"

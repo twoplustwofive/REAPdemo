@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="Welcome User!"
+        android:paddingLeft="20dp"
+        android:id="@+id/welcome"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_blue_dark"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ledgers_rview"
+        android:layout_weight="1"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:id="@+id/buttons"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="5dp"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Add Ledger"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:textColor="#fff"
+            android:background="@android:color/holo_blue_dark"
+            android:id="@+id/ledger_add_button"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:textColor="#fff"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/holo_blue_dark"
+            android:id="@+id/logout_button"
+            />
+    </LinearLayout>
+
+</LinearLayout>
